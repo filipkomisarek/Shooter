@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddgwhh5glbc1m"]
+
+[ext_resource type="Texture2D" uid="uid://tvd6h5ia1r1h" path="res://graphics/player/player.png" id="1_d0btq"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_sl6m3"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_sl6m3")
+
+[node name="PlayerImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_d0btq")
