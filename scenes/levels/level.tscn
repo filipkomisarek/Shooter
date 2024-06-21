@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://p2msi5w68jhv"]
+[gd_scene load_steps=7 format=3 uid="uid://p2msi5w68jhv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_b5aj4"]
+[ext_resource type="PackedScene" uid="uid://bouwqxyeec6mw" path="res://scenes/enviro/billboard.tscn" id="4_ub0n7"]
 [ext_resource type="PackedScene" uid="uid://ddgwhh5glbc1m" path="res://scenes/player/player.tscn" id="5_5kerq"]
+[ext_resource type="PackedScene" uid="uid://ymgva763awrp" path="res://scenes/enemies/drone.tscn" id="5_2382c"]
+[ext_resource type="Script" path="res://scenes/enemies/drone.gd" id="6_c0tnm"]
 [ext_resource type="PackedScene" uid="uid://d342wqixetqrl" path="res://scenes/enviro/bed.tscn" id="6_ueqm7"]
 
 [node name="Level" type="Node2D"]
@@ -12,4 +15,11 @@ position = Vector2(437, 141)
 rotation = -0.71733
 
 [node name="Player" parent="." instance=ExtResource("5_5kerq")]
-position = Vector2(111, 7)
+position = Vector2(670, 397)
+
+[node name="Billboard" parent="." instance=ExtResource("4_ub0n7")]
+position = Vector2(586, 579)
+
+[node name="Drone" parent="." instance=ExtResource("5_2382c")]
+position = Vector2(185, 317)
+script = ExtResource("6_c0tnm")
