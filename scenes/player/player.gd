@@ -20,7 +20,12 @@ func _process(_delta):
 	if Input.is_action_pressed("secondary action") and can_grenade:
 		print('shoot grenade')
 		can_grenade = false
+		$GrenadeReloadTimer.start()
 
 
 func _on_timer_timeout():
 	can_laser = true
+
+
+func _on_grenade_reload_timer_timeout():
+	can_grenade = true

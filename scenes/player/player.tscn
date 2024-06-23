@@ -20,4 +20,9 @@ shape = SubResource("CircleShape2D_qkw52")
 wait_time = 0.5
 one_shot = true
 
+[node name="GrenadeReloadTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="GrenadeReloadTimer" to="." method="_on_grenade_reload_timer_timeout"]
